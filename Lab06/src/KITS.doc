@@ -1,0 +1,246 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*
+ * Structs with dynamic memory allocation and linked list example
+ * Idea from http://www.learn-c.org/en/Linked_lists
+ * See this page for additional list operations
+ * Written after 10PM likely to contain nasty bugs :-(
+ */
+
+/* Use valgrind to test memory leaks
+ * valgrind --leak-check=full --track-origins=yes --undef-value-errors=yes --show-leak-kinds=all --show-reachable=yes ./struct-linked-list
+ */
+
+#define TRUE 1
+#define FALSE 0
+
+typedef unsigned int kg_t;
+typedef unsigned int id_t;
+
+typedef struct cargo {
+    char *name;
+    kg_t weight;
+} cargo_t;
+
+
+typedef struct wagon {
+    id_t w_u_id;
+    cargo_t *cargo;
+    struct wagon *next;
+} wagon_t;
+
+
+cargo_t *create_cargo(const char *name, kg_t *weight);
+void destroy_cargo(cargo_t *cargo);
+wagon_t *create_train(cargo_t *cargo);
+void destroy_train(wagon_t *train_head_ptr);
+void push_wagon(wagon_t *train_head_ptr, cargo_t *cargo);
+void remove_wagon(wagon_t **train_head_ptr, id_t *rm_w_id);
+void print_cargo(const cargo_t *cargo);
+void print_train(wagon_t *train_head_ptr);
+id_t get_w_u_id(void);
+
+
+cargo_t *create_cargo(const char *name, kg_t *weight)
+{
+    cargo_t *cargo_ptr = NULL;
+    cargo_ptr = malloc(sizeof(cargo_t));
+
+    if (cargo_ptr == NULL) {
+        printf("Memory operation failed\n");
+        exit(1);
+    }
+
+    cargo_ptr->name = malloc(strlen(name) + 1);
+
+    if (cargo_ptr->name == NULL) {
+        printf("Memory operation failed\n");
+        free(cargo_ptr);
+        exit(1);
+    }
+
+    strcpy(cargo_ptr->name, name);
+    cargo_ptr->weight = *weight;
+    return cargo_ptr;
+}
+
+
+void destroy_cargo(cargo_t *cargo_ptr)
+{
+    free(cargo_ptr->name);
+    free(cargo_ptr);
+}
+
+
+/* That is one possible option to create first list item. Useful when handling multiple lists in same program */
+wagon_t *create_train(cargo_t *cargo)
+{
+    wagon_t *train_head_ptr = malloc(sizeof(wagon_t));
+
+    if (train_head_ptr == NULL) {
+        printf("Memory operation failed\n");
+        exit(1);
+    }
+
+    //    printf("train_head_ptr in create_train: %p\n", train_head_ptr);
+    train_head_ptr->w_u_id = get_w_u_id();
+    train_head_ptr->cargo = cargo;
+    train_head_ptr->next = NULL;
+    return train_head_ptr;
+}
+
+
+/* Destroys train by freeing allocated memory */
+void destroy_train(wagon_t *train_head_ptr)
+{
+    wagon_t *tmp_head = NULL;
+
+    /* Start destroying from head until end is reached */
+    while (train_head_ptr != NULL) {
+        /* Sets temporary head */
+        tmp_head = train_head_ptr;
+        /* Moves head to next list element */
+        train_head_ptr = train_head_ptr->next;
+        /* Frees memory allocated for temporary head */
+        free(tmp_head);
+    }
+}
+
+
+/* Adds wagon to train tail */
+void push_wagon(wagon_t *train_head_ptr, cargo_t *cargo)
+{
+    wagon_t *current = train_head_ptr;
+
+    while (current->next != NULL) {
+        current = current->next;
+    }
+
+    current->next = malloc(sizeof(wagon_t));
+
+    if (current->next == NULL) {
+        printf("Memory operation failed\n");
+        exit(1);
+    }
+
+    current->next->w_u_id = get_w_u_id();
+    current->next->cargo = cargo;
+    current->next->next = NULL;
+}
+
+/* Remove specific wagon from train */
+void remove_wagon(wagon_t **train_head_ptr, id_t *rm_w_id)
+{
+    // Note that we dereference pointer to pointer in order change head address
+    // Remember? All arguments are passed by value
+    // We can change only local copy or change value via pointer
+    wagon_t *current = *train_head_ptr;
+    wagon_t *prev = NULL;
+
+    while (current != NULL) {
+        if (current->w_u_id == *rm_w_id) {
+            if (prev == NULL) {
+                // Special condition when first item is removed
+                // No need to change next value. Just point head to next item
+                *train_head_ptr = current->next;
+            } else {
+                prev->next = current->next;
+            }
+
+            free(current);
+            return;
+        }
+
+        prev = current;
+        current = current->next;
+    }
+
+    printf("Wagon with id: %d is not in train\n", *rm_w_id);
+}
+
+void print_cargo(const cargo_t *cargo)
+{
+    printf("Cargo item name: %s\n", cargo->name);
+    printf("Cargo weight: %u kg\n", cargo->weight);
+}
+
+
+void print_train(wagon_t *train_head_ptr)
+{
+    wagon_t *current = train_head_ptr;
+    int w_in_train = 0;
+    kg_t t_gargo = 0;
+    printf("Train sats:\n");
+
+    while (current != NULL) {
+        printf("Wagon No. %d ID: %d\n", ++w_in_train, current->w_u_id);
+        t_gargo += current->cargo->weight;
+        current = current->next;
+    }
+
+    if (t_gargo) {
+        printf("Total cargo in train %u (kg)\n", t_gargo);
+    }
+}
+
+
+/* Get wagon ID not that we hide variable from user */
+id_t get_w_u_id(void)
+{
+    // Unique ID for each wagon.
+    // Stays in memory but is not global.
+    static id_t wagon_u_id = 0;
+    // Return ID and increment by one for next call.
+    // So ID is incremented by 1.
+    return wagon_u_id++;
+}
+
+
+int main(int argc, char **argv)
+{
+    (void) argc;
+    (void) argv;
+    char s_buf[512] = {0};
+    unsigned int i_buf = 0;
+    cargo_t *cargo_ptr = NULL;
+    wagon_t *train_head_ptr = NULL;
+    printf("Enter cargo (syntax: <name> <weight in kg>) >");
+    scanf("%s %u", s_buf, &i_buf);
+    cargo_ptr = create_cargo(s_buf, &i_buf);
+    print_cargo(cargo_ptr);
+    train_head_ptr = create_train(cargo_ptr);
+    print_train(train_head_ptr);
+    printf("Enter number of wagons add to train >");
+    scanf("%u", & i_buf);
+
+    for (int i = 0; i < i_buf; i++) {
+        push_wagon(train_head_ptr, cargo_ptr);
+    }
+
+    print_train(train_head_ptr);
+
+    while (train_head_ptr != NULL) {
+        printf("Enter wagon ID to be removed or -1 to exit >");
+        scanf("%d", & i_buf);
+
+        if (i_buf == -1) {
+            break;
+        }
+
+        // Note that we use poiter to pointer again
+        remove_wagon(&train_head_ptr, &i_buf);
+        print_train(train_head_ptr);
+    }
+
+    /* Watch out for memory leaks. All allocated memory shall be freed manually */
+    if (train_head_ptr != NULL) {
+        // Do not free memory if it was freed already earlier by removing all wagons
+        destroy_train(train_head_ptr);
+    }
+
+    destroy_cargo(cargo_ptr);
+    return 0;
+}
