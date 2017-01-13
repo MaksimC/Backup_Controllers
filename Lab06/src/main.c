@@ -51,13 +51,12 @@ ALSO REPLACE in void print_version(FILE *stream), microrl.c, GIT_VER!!
 
 */
 
+#ifndef BAUD
 #define BAUD 9600
+#endif
+
 
 volatile uint32_t system_time;
-
-#define DOOR_INIT DDRA |= _BV(DDA1)
-#define DOOR_OPEN PORTA |= _BV(PORTA1)
-#define DOOR_CLOSE PORTA &= ~_BV(PORTA1)
 
 // Create microrl object and pointer on it
 microrl_t rl;
@@ -138,6 +137,12 @@ static inline void start_cli(void)
 }
 
 
+static inline void initialize_lock() {
+    //set Data Direction register of port A as output
+    DDRA |= _BV(DDA1);
+}
+
+
 static inline void heartbeat ()
 {
     static uint32_t current_time;
@@ -160,13 +165,15 @@ static inline void heartbeat ()
 }
 
 
-static inline void handle_door()
+/*Summary: function will read UID, fill card_t struct, setting card-> user as emmpty, the try to find scanned card in existing card list. 
+If card found - display holder name & open the lock for 2 seconds, if not - display error message and close lock. Messages duration 3 secs*/
+static inline void lock_keeper()
 {
     Uid uid;
     card_t card;
-    uint32_t time_cur = system_time;//time();
-    static uint32_t message_start;
-    static uint32_t door_open_start;
+    uint32_t time_cur = system_time; //note current time
+    static uint32_t message_start_time;
+    static uint32_t lock_open_start;
     if (PICC_IsNewCardPresent())
     {
         PICC_ReadCardSerial(&uid);
@@ -176,36 +183,38 @@ static inline void handle_door()
         card_t *found_card = rfid_find_card(&card);
         if (found_card)
         {
-            lcd_clr(0X40, 16);
+            lcd_clr(0X40, 16); //clears screen line 2
             lcd_goto(0x40);
-            lcd_puts(found_card->user);
+            lcd_puts(found_card->user); // display card holder name message
 
-            DOOR_OPEN;
+            PORTA |= _BV(PORTA1); // sets port A, pin 1 as "high" - "Lock is opened"
         }
         else
         {
-            DOOR_CLOSE;
+            PORTA &= ~_BV(PORTA1); // sets port A, pin 1 as "low" - "Lock is closed"
             lcd_clr(0X40, 16);
             lcd_goto(0x40);
-            lcd_puts_P(access_denied_msg);
+            lcd_puts_P(access_denied_msg); //display access denied message
         }
-        door_open_start = time_cur;
-        message_start = time_cur;
+        lock_open_start = time_cur; //note time when lock was opened
+        message_start_time = time_cur; // note time when message was put to LCD
     }
 
-    if ((message_start + 3) < time_cur)
+    if ((message_start_time + 3) < time_cur)  //count 3 seconds
     {
-        message_start = time_cur + 3;
-        lcd_clr(0X40, 16);
+        message_start_time = time_cur + 3;
+        lcd_clr(0X40, 16); //remove message from screen
     }
 
-    if ((door_open_start + 2) < time_cur)
+    if ((lock_open_start + 2) < time_cur)  //count 2 seconds
     {
-        DOOR_CLOSE;
+        PORTA &= ~_BV(PORTA1);  // sets port A, pin 1 as "low" - "Lock is closed"
     }
 }
 
 
+/*Summary: call functions for hardware, input/outputs initialization, prints start messages to consoles
+and keep program running in infinite loop.*/
 void main (void)
 {
     initialize_io();
@@ -213,15 +222,15 @@ void main (void)
     initialize_lcd();
     initialize_interrupts();
     initialize_rfid();
+    initialize_lock();
     print_console();
     start_cli();
-
+    
     while (1)
     {
         heartbeat();
-        // CLI commands are handled in cli_execute()
         microrl_insert_char(prl, cli_get_char());
-        handle_door();
+        lock_keeper();
     }
 }
 

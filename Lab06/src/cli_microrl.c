@@ -38,7 +38,7 @@ typedef struct cli_cmd
     const uint8_t func_argc;
 } cli_cmd_t;
 
-
+/*Array of structures, help commands, help messages, relevant function, number of arguments*/
 const cli_cmd_t cli_cmds[] = {
     {help_cmd, help_help, cli_print_help, 0},
     {ver_cmd, ver_help, cli_print_ver, 0},
@@ -58,6 +58,7 @@ void cli_print(const char *str)
 }
 
 
+/*Summary: non-blocking method receives input from CLI*/
 char cli_get_char(void)
 {
     if (uart0_peek() != UART_NO_DATA)
@@ -71,6 +72,7 @@ char cli_get_char(void)
 }
 
 
+/*Summary: prints out list of CLI implemented commands, by iterating in structure's array cli_cmd_t */
 void cli_print_help(const char *const *argv)
 {
     (void) argv;
@@ -87,6 +89,7 @@ void cli_print_help(const char *const *argv)
 }
 
 
+/*Summary: Prints GIT info and translator version to console*/
 void print_version(FILE *stream)
 {
     //Print version to UART3 console
@@ -105,6 +108,7 @@ void cli_print_ver(const char *const *argv)
 }
 
 
+/*Summary: Prints ASCII tables to console*/
 void cli_print_ascii_tbls(const char *const *argv)
 {
     (void) argv;
@@ -122,6 +126,8 @@ void cli_print_ascii_tbls(const char *const *argv)
 }
 
 
+/*Summary: function compares string received from CLI input(second argument) with strings in Lookup list months, and if found,
+prints relevant months names to console and to LCD.*/
 void cli_handle_month(const char *const *argv)
 {
     putc('\n', stdout);
@@ -143,6 +149,7 @@ void cli_handle_month(const char *const *argv)
 }
 
 
+/*Summary: print error message, if CLI command is not found*/
 void cli_print_cmd_error(void)
 {
     printf_P(PSTR("\n"));
@@ -150,6 +157,7 @@ void cli_print_cmd_error(void)
 }
 
 
+/*Summary: print error message, if arguments for CLI command are missing or excessive*/
 void cli_print_cmd_arg_error(void)
 {
     printf_P(PSTR("\n"));
@@ -157,6 +165,7 @@ void cli_print_cmd_arg_error(void)
 }
 
 
+/*Summary: methods polls the RFID reader, and if card detected, prints information of card to console*/
 void cli_rfid_read(const char *const *argv)
 {
     (void) argv;
@@ -184,6 +193,8 @@ void cli_rfid_read(const char *const *argv)
 }
 
 
+/*Summary: function polls the RFID reader constantly, and if card detected, stores card UID and UID size to card_t struct instance. 
+  User is copied from CLI input. Validation of UID and add a new user happen in method rfid_add_user.*/
 void cli_rfid_add(const char *const *argv)
 {
     (void) argv;
@@ -207,6 +218,7 @@ void cli_rfid_add(const char *const *argv)
 }
 
 
+/*Summary: read input from console and call frid_remove_card_by_uid function, sending argument copied from CLI 2nd word(argv[1]) input*/
 void cli_rfid_remove(const char *const *argv)
 {
     (void) argv;
@@ -214,7 +226,7 @@ void cli_rfid_remove(const char *const *argv)
 }
 
 
-
+/*Summary: read input from console and call cli_rfid_print function, sending argument copied from CLI 2nd word(argv[1]) input*/
 void cli_rfid_print(const char *const *argv)
 {
     (void) argv;
@@ -222,6 +234,7 @@ void cli_rfid_print(const char *const *argv)
 }
 
 
+/*Summary: prints to console memory usage statistics and dynamics, using methods from "library andy_brown_memdebug"*/
 void cli_mem_stat(const char *const *argv)
 {
     (void) argv;
@@ -249,6 +262,7 @@ void cli_mem_stat(const char *const *argv)
 }
 
 
+/*Summary: Handles CLI inputs, validates it and calls relevant functions, connected to command names*/
 int cli_execute(int argc, const char *const *argv)
 {
 
