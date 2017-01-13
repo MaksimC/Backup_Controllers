@@ -409,7 +409,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x37b8
+.text           0x00000000     0x37c0
  *(.vectors)
  .vectors       0x00000000       0xe4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega2560/avr6/crtatmega2560.o
                 0x00000000                __vector_default
@@ -513,134 +513,134 @@ END GROUP
                 0x000004c4        0x6 src/hmi_msg.o
                 0x000004c4                print_cmd
  .progmem.data.remove_help
-                0x000004ca       0x32 src/hmi_msg.o
+                0x000004ca       0x36 src/hmi_msg.o
                 0x000004ca                remove_help
  .progmem.data.remove_cmd
-                0x000004fc        0x3 src/hmi_msg.o
-                0x000004fc                remove_cmd
+                0x00000500        0x7 src/hmi_msg.o
+                0x00000500                remove_cmd
  .progmem.data.add_help
-                0x000004ff       0x37 src/hmi_msg.o
-                0x000004ff                add_help
+                0x00000507       0x37 src/hmi_msg.o
+                0x00000507                add_help
  .progmem.data.add_cmd
-                0x00000536        0x4 src/hmi_msg.o
-                0x00000536                add_cmd
+                0x0000053e        0x4 src/hmi_msg.o
+                0x0000053e                add_cmd
  .progmem.data.read_help
-                0x0000053a       0x23 src/hmi_msg.o
-                0x0000053a                read_help
+                0x00000542       0x23 src/hmi_msg.o
+                0x00000542                read_help
  .progmem.data.read_cmd
-                0x0000055d        0x5 src/hmi_msg.o
-                0x0000055d                read_cmd
+                0x00000565        0x5 src/hmi_msg.o
+                0x00000565                read_cmd
  .progmem.data.month_help
-                0x00000562       0x3c src/hmi_msg.o
-                0x00000562                month_help
+                0x0000056a       0x3c src/hmi_msg.o
+                0x0000056a                month_help
  .progmem.data.month_cmd
-                0x0000059e        0x6 src/hmi_msg.o
-                0x0000059e                month_cmd
+                0x000005a6        0x6 src/hmi_msg.o
+                0x000005a6                month_cmd
  .progmem.data.ascii_help
-                0x000005a4       0x13 src/hmi_msg.o
-                0x000005a4                ascii_help
+                0x000005ac       0x13 src/hmi_msg.o
+                0x000005ac                ascii_help
  .progmem.data.ascii_cmd
-                0x000005b7        0x6 src/hmi_msg.o
-                0x000005b7                ascii_cmd
+                0x000005bf        0x6 src/hmi_msg.o
+                0x000005bf                ascii_cmd
  .progmem.data.ver_help
-                0x000005bd       0x11 src/hmi_msg.o
-                0x000005bd                ver_help
+                0x000005c5       0x11 src/hmi_msg.o
+                0x000005c5                ver_help
  .progmem.data.ver_cmd
-                0x000005ce        0x8 src/hmi_msg.o
-                0x000005ce                ver_cmd
+                0x000005d6        0x8 src/hmi_msg.o
+                0x000005d6                ver_cmd
  .progmem.data.help_help
-                0x000005d6        0x9 src/hmi_msg.o
-                0x000005d6                help_help
+                0x000005de        0x9 src/hmi_msg.o
+                0x000005de                help_help
  .progmem.data.help_cmd
-                0x000005df        0x5 src/hmi_msg.o
-                0x000005df                help_cmd
+                0x000005e7        0x5 src/hmi_msg.o
+                0x000005e7                help_cmd
  .progmem.data.months
-                0x000005e4        0xc src/hmi_msg.o
-                0x000005e4                months
+                0x000005ec        0xc src/hmi_msg.o
+                0x000005ec                months
  .progmem.data.string_6
-                0x000005f0        0x5 src/hmi_msg.o
+                0x000005f8        0x5 src/hmi_msg.o
  .progmem.data.string_5
-                0x000005f5        0x4 src/hmi_msg.o
+                0x000005fd        0x4 src/hmi_msg.o
  .progmem.data.string_4
-                0x000005f9        0x6 src/hmi_msg.o
+                0x00000601        0x6 src/hmi_msg.o
  .progmem.data.string_3
-                0x000005ff        0x6 src/hmi_msg.o
+                0x00000607        0x6 src/hmi_msg.o
  .progmem.data.string_2
-                0x00000605        0x9 src/hmi_msg.o
+                0x0000060d        0x9 src/hmi_msg.o
  .progmem.data.string_1
-                0x0000060e        0x8 src/hmi_msg.o
- .progmem.data.__c.2470
-                0x00000616        0xf src/main.o
- .progmem.data.__c.2456
-                0x00000625       0x11 src/main.o
- .progmem.data.__c.2454
-                0x00000636       0x87 src/main.o
- .progmem.data.__c.2452
-                0x000006bd       0x11 src/main.o
+                0x00000616        0x8 src/hmi_msg.o
+ .progmem.data.__c.2462
+                0x0000061e        0xf src/main.o
+ .progmem.data.__c.2448
+                0x0000062d       0x11 src/main.o
+ .progmem.data.__c.2446
+                0x0000063e       0x87 src/main.o
+ .progmem.data.__c.2444
+                0x000006c5       0x11 src/main.o
  .progmem.data.__c.2250
-                0x000006ce       0x30 src/rfid.o
+                0x000006d6       0x30 src/rfid.o
  .progmem.data.__c.2245
-                0x000006fe        0x2 src/rfid.o
+                0x00000706        0x2 src/rfid.o
  .progmem.data.__c.2243
-                0x00000700        0x9 src/rfid.o
+                0x00000708        0x9 src/rfid.o
  .progmem.data.__c.2241
-                0x00000709       0x15 src/rfid.o
+                0x00000711       0x15 src/rfid.o
  .progmem.data.__c.2239
-                0x0000071e        0x2 src/rfid.o
+                0x00000726        0x2 src/rfid.o
  .progmem.data.__c.2237
-                0x00000720        0x9 src/rfid.o
+                0x00000728        0x9 src/rfid.o
  .progmem.data.__c.2235
-                0x00000729       0x15 src/rfid.o
+                0x00000731       0x15 src/rfid.o
  .progmem.data.__c.2229
-                0x0000073e       0x16 src/rfid.o
+                0x00000746       0x16 src/rfid.o
  .progmem.data.__c.2212
-                0x00000754        0xc src/rfid.o
+                0x0000075c        0xc src/rfid.o
  .progmem.data.__c.2206
-                0x00000760       0x52 src/rfid.o
+                0x00000768       0x52 src/rfid.o
  .progmem.data.__c.2202
-                0x000007b2       0x45 src/rfid.o
+                0x000007ba       0x45 src/rfid.o
  .progmem.data.__c.2193
-                0x000007f7       0x18 src/rfid.o
+                0x000007ff       0x18 src/rfid.o
  .progmem.data.__c.2189
-                0x0000080f       0x16 src/rfid.o
+                0x00000817       0x16 src/rfid.o
  .progmem.data.__c.2184
-                0x00000825        0x2 src/rfid.o
+                0x0000082d        0x2 src/rfid.o
  .progmem.data.__c.2182
-                0x00000827        0x9 src/rfid.o
+                0x0000082f        0x9 src/rfid.o
  .progmem.data.__c.2176
-                0x00000830        0x4 src/rfid.o
+                0x00000838        0x4 src/rfid.o
  .progmem.data.__c.2174
-                0x00000834        0x7 src/rfid.o
-                0x0000083c                . = ALIGN (0x2)
- *fill*         0x0000083b        0x1 
+                0x0000083c        0x7 src/rfid.o
+                0x00000844                . = ALIGN (0x2)
+ *fill*         0x00000843        0x1 
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x0000083c                __ctors_start = .
+                0x00000844                __ctors_start = .
  *(.ctors)
-                0x0000083c                __ctors_end = .
-                0x0000083c                __dtors_start = .
+                0x00000844                __ctors_end = .
+                0x00000844                __dtors_start = .
  *(.dtors)
-                0x0000083c                __dtors_end = .
+                0x00000844                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x0000083c        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega2560/avr6/crtatmega2560.o
-                0x0000083c                __init
+ .init0         0x00000844        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega2560/avr6/crtatmega2560.o
+                0x00000844                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x0000083c       0x10 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega2560/avr6/crtatmega2560.o
+ .init2         0x00000844       0x10 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega2560/avr6/crtatmega2560.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x0000084c       0x1a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr6\libgcc.a(_copy_data.o)
-                0x0000084c                __do_copy_data
- .init4         0x00000866       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr6\libgcc.a(_clear_bss.o)
-                0x00000866                __do_clear_bss
+ .init4         0x00000854       0x1a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr6\libgcc.a(_copy_data.o)
+                0x00000854                __do_copy_data
+ .init4         0x0000086e       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr6\libgcc.a(_clear_bss.o)
+                0x0000086e                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -651,375 +651,372 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00000876        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega2560/avr6/crtatmega2560.o
+ .init9         0x0000087e        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega2560/avr6/crtatmega2560.o
  *(.init9)
  *(.text)
- .text          0x0000087e        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega2560/avr6/crtatmega2560.o
-                0x0000087e                __vector_38
-                0x0000087e                __vector_22
-                0x0000087e                __vector_28
-                0x0000087e                __vector_1
-                0x0000087e                __vector_32
-                0x0000087e                __vector_34
-                0x0000087e                __vector_12
-                0x0000087e                __vector_46
-                0x0000087e                __bad_interrupt
-                0x0000087e                __vector_6
-                0x0000087e                __vector_31
-                0x0000087e                __vector_35
-                0x0000087e                __vector_39
-                0x0000087e                __vector_3
-                0x0000087e                __vector_23
-                0x0000087e                __vector_30
-                0x0000087e                __vector_45
-                0x0000087e                __vector_11
-                0x0000087e                __vector_13
-                0x0000087e                __vector_17
-                0x0000087e                __vector_19
-                0x0000087e                __vector_56
-                0x0000087e                __vector_7
-                0x0000087e                __vector_49
-                0x0000087e                __vector_41
-                0x0000087e                __vector_43
-                0x0000087e                __vector_27
-                0x0000087e                __vector_5
-                0x0000087e                __vector_33
-                0x0000087e                __vector_52
-                0x0000087e                __vector_37
-                0x0000087e                __vector_4
-                0x0000087e                __vector_44
-                0x0000087e                __vector_51
-                0x0000087e                __vector_9
-                0x0000087e                __vector_2
-                0x0000087e                __vector_21
-                0x0000087e                __vector_15
-                0x0000087e                __vector_36
-                0x0000087e                __vector_29
-                0x0000087e                __vector_40
-                0x0000087e                __vector_8
-                0x0000087e                __vector_48
-                0x0000087e                __vector_14
-                0x0000087e                __vector_53
-                0x0000087e                __vector_10
-                0x0000087e                __vector_50
-                0x0000087e                __vector_16
-                0x0000087e                __vector_18
-                0x0000087e                __vector_20
-                0x0000087e                __vector_42
-                0x00000880                . = ALIGN (0x2)
+ .text          0x00000886        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega2560/avr6/crtatmega2560.o
+                0x00000886                __vector_38
+                0x00000886                __vector_22
+                0x00000886                __vector_28
+                0x00000886                __vector_1
+                0x00000886                __vector_32
+                0x00000886                __vector_34
+                0x00000886                __vector_12
+                0x00000886                __vector_46
+                0x00000886                __bad_interrupt
+                0x00000886                __vector_6
+                0x00000886                __vector_31
+                0x00000886                __vector_35
+                0x00000886                __vector_39
+                0x00000886                __vector_3
+                0x00000886                __vector_23
+                0x00000886                __vector_30
+                0x00000886                __vector_45
+                0x00000886                __vector_11
+                0x00000886                __vector_13
+                0x00000886                __vector_17
+                0x00000886                __vector_19
+                0x00000886                __vector_56
+                0x00000886                __vector_7
+                0x00000886                __vector_49
+                0x00000886                __vector_41
+                0x00000886                __vector_43
+                0x00000886                __vector_27
+                0x00000886                __vector_5
+                0x00000886                __vector_33
+                0x00000886                __vector_52
+                0x00000886                __vector_37
+                0x00000886                __vector_4
+                0x00000886                __vector_44
+                0x00000886                __vector_51
+                0x00000886                __vector_9
+                0x00000886                __vector_2
+                0x00000886                __vector_21
+                0x00000886                __vector_15
+                0x00000886                __vector_36
+                0x00000886                __vector_29
+                0x00000886                __vector_40
+                0x00000886                __vector_8
+                0x00000886                __vector_48
+                0x00000886                __vector_14
+                0x00000886                __vector_53
+                0x00000886                __vector_10
+                0x00000886                __vector_50
+                0x00000886                __vector_16
+                0x00000886                __vector_18
+                0x00000886                __vector_20
+                0x00000886                __vector_42
+                0x00000888                . = ALIGN (0x2)
  *(.text.*)
  .text.__vector_25
-                0x00000880       0x72 lib/andygock_avr-uart/uart.o
-                0x00000880                __vector_25
+                0x00000888       0x72 lib/andygock_avr-uart/uart.o
+                0x00000888                __vector_25
  .text.__vector_26
-                0x000008f2       0x60 lib/andygock_avr-uart/uart.o
-                0x000008f2                __vector_26
+                0x000008fa       0x60 lib/andygock_avr-uart/uart.o
+                0x000008fa                __vector_26
  .text.uart0_init
-                0x00000952       0x32 lib/andygock_avr-uart/uart.o
-                0x00000952                uart0_init
+                0x0000095a       0x32 lib/andygock_avr-uart/uart.o
+                0x0000095a                uart0_init
  .text.uart0_getc
-                0x00000984       0x3a lib/andygock_avr-uart/uart.o
-                0x00000984                uart0_getc
+                0x0000098c       0x3a lib/andygock_avr-uart/uart.o
+                0x0000098c                uart0_getc
  .text.uart0_peek
-                0x000009be       0x34 lib/andygock_avr-uart/uart.o
-                0x000009be                uart0_peek
+                0x000009c6       0x34 lib/andygock_avr-uart/uart.o
+                0x000009c6                uart0_peek
  .text.uart0_putc
-                0x000009f2       0x32 lib/andygock_avr-uart/uart.o
-                0x000009f2                uart0_putc
+                0x000009fa       0x32 lib/andygock_avr-uart/uart.o
+                0x000009fa                uart0_putc
  .text.__vector_54
-                0x00000a24       0x72 lib/andygock_avr-uart/uart.o
-                0x00000a24                __vector_54
+                0x00000a2c       0x72 lib/andygock_avr-uart/uart.o
+                0x00000a2c                __vector_54
  .text.__vector_55
-                0x00000a96       0x60 lib/andygock_avr-uart/uart.o
-                0x00000a96                __vector_55
+                0x00000a9e       0x60 lib/andygock_avr-uart/uart.o
+                0x00000a9e                __vector_55
  .text.uart3_init
-                0x00000af6       0x32 lib/andygock_avr-uart/uart.o
-                0x00000af6                uart3_init
+                0x00000afe       0x32 lib/andygock_avr-uart/uart.o
+                0x00000afe                uart3_init
  .text.uart3_putc
-                0x00000b28       0x32 lib/andygock_avr-uart/uart.o
-                0x00000b28                uart3_putc
+                0x00000b30       0x32 lib/andygock_avr-uart/uart.o
+                0x00000b30                uart3_putc
  .text.getMemoryUsed
-                0x00000b5a       0x4e lib/andy_brown_memdebug/memdebug.o
-                0x00000b5a                getMemoryUsed
+                0x00000b62       0x4e lib/andy_brown_memdebug/memdebug.o
+                0x00000b62                getMemoryUsed
  .text.getFreeMemory
-                0x00000ba8       0x30 lib/andy_brown_memdebug/memdebug.o
-                0x00000ba8                getFreeMemory
+                0x00000bb0       0x30 lib/andy_brown_memdebug/memdebug.o
+                0x00000bb0                getFreeMemory
  .text.getLargestBlockInFreeList
-                0x00000bd8       0x2e lib/andy_brown_memdebug/memdebug.o
-                0x00000bd8                getLargestBlockInFreeList
+                0x00000be0       0x2e lib/andy_brown_memdebug/memdebug.o
+                0x00000be0                getLargestBlockInFreeList
  .text.getNumberOfBlocksInFreeList
-                0x00000c06       0x24 lib/andy_brown_memdebug/memdebug.o
-                0x00000c06                getNumberOfBlocksInFreeList
+                0x00000c0e       0x24 lib/andy_brown_memdebug/memdebug.o
+                0x00000c0e                getNumberOfBlocksInFreeList
  .text.getFreeListSize
-                0x00000c2a       0x2e lib/andy_brown_memdebug/memdebug.o
-                0x00000c2a                getFreeListSize
+                0x00000c32       0x2e lib/andy_brown_memdebug/memdebug.o
+                0x00000c32                getFreeListSize
  .text.getLargestNonFreeListBlock
-                0x00000c58       0x44 lib/andy_brown_memdebug/memdebug.o
-                0x00000c58                getLargestNonFreeListBlock
+                0x00000c60       0x44 lib/andy_brown_memdebug/memdebug.o
+                0x00000c60                getLargestNonFreeListBlock
  .text.getLargestAvailableMemoryBlock
-                0x00000c9c       0x18 lib/andy_brown_memdebug/memdebug.o
-                0x00000c9c                getLargestAvailableMemoryBlock
+                0x00000ca4       0x18 lib/andy_brown_memdebug/memdebug.o
+                0x00000ca4                getLargestAvailableMemoryBlock
  .text.lcd_write
-                0x00000cb4      0x10a lib/hd44780_111/hd44780.o
+                0x00000cbc      0x10a lib/hd44780_111/hd44780.o
  .text.lcd_command
-                0x00000dbe        0x6 lib/hd44780_111/hd44780.o
-                0x00000dbe                lcd_command
+                0x00000dc6        0x6 lib/hd44780_111/hd44780.o
+                0x00000dc6                lcd_command
  .text.lcd_goto
-                0x00000dc4       0x26 lib/hd44780_111/hd44780.o
-                0x00000dc4                lcd_goto
+                0x00000dcc       0x26 lib/hd44780_111/hd44780.o
+                0x00000dcc                lcd_goto
  .text.lcd_clrscr
-                0x00000dea        0x6 lib/hd44780_111/hd44780.o
-                0x00000dea                lcd_clrscr
+                0x00000df2        0x6 lib/hd44780_111/hd44780.o
+                0x00000df2                lcd_clrscr
  .text.lcd_putc
-                0x00000df0        0x6 lib/hd44780_111/hd44780.o
-                0x00000df0                lcd_putc
+                0x00000df8        0x6 lib/hd44780_111/hd44780.o
+                0x00000df8                lcd_putc
  .text.lcd_puts
-                0x00000df6       0x1e lib/hd44780_111/hd44780.o
-                0x00000df6                lcd_puts
+                0x00000dfe       0x1e lib/hd44780_111/hd44780.o
+                0x00000dfe                lcd_puts
  .text.lcd_puts_P
-                0x00000e14       0x22 lib/hd44780_111/hd44780.o
-                0x00000e14                lcd_puts_P
+                0x00000e1c       0x22 lib/hd44780_111/hd44780.o
+                0x00000e1c                lcd_puts_P
  .text.lcd_init
-                0x00000e36      0x12a lib/hd44780_111/hd44780.o
-                0x00000e36                lcd_init
- .text.lcd_clr  0x00000f60       0x38 lib/hd44780_111/hd44780.o
-                0x00000f60                lcd_clr
+                0x00000e3e      0x12a lib/hd44780_111/hd44780.o
+                0x00000e3e                lcd_init
+ .text.lcd_clr  0x00000f68       0x38 lib/hd44780_111/hd44780.o
+                0x00000f68                lcd_clr
  .text.terminal_reset_cursor
-                0x00000f98       0x7a lib/helius_microrl/microrl.o
+                0x00000fa0       0x7a lib/helius_microrl/microrl.o
  .text.terminal_move_cursor
-                0x00001012       0xae lib/helius_microrl/microrl.o
+                0x0000101a       0xae lib/helius_microrl/microrl.o
  .text.terminal_print_line
-                0x000010c0       0xc8 lib/helius_microrl/microrl.o
+                0x000010c8       0xc8 lib/helius_microrl/microrl.o
  .text.microrl_backspace
-                0x00001188       0x8e lib/helius_microrl/microrl.o
+                0x00001190       0x8e lib/helius_microrl/microrl.o
  .text.microrl_init
-                0x00001216       0x4e lib/helius_microrl/microrl.o
-                0x00001216                microrl_init
+                0x0000121e       0x4e lib/helius_microrl/microrl.o
+                0x0000121e                microrl_init
  .text.microrl_set_execute_callback
-                0x00001264        0xc lib/helius_microrl/microrl.o
-                0x00001264                microrl_set_execute_callback
+                0x0000126c        0xc lib/helius_microrl/microrl.o
+                0x0000126c                microrl_set_execute_callback
  .text.new_line_handler
-                0x00001270      0x15c lib/helius_microrl/microrl.o
-                0x00001270                new_line_handler
+                0x00001278      0x15c lib/helius_microrl/microrl.o
+                0x00001278                new_line_handler
  .text.microrl_insert_char
-                0x000013cc      0x212 lib/helius_microrl/microrl.o
-                0x000013cc                microrl_insert_char
+                0x000013d4      0x212 lib/helius_microrl/microrl.o
+                0x000013d4                microrl_insert_char
  .text.MFRC522_init
-                0x000015de       0x1e lib/matejx_avr_lib/mfrc522.o
-                0x000015de                MFRC522_init
+                0x000015e6       0x1e lib/matejx_avr_lib/mfrc522.o
+                0x000015e6                MFRC522_init
  .text.PCD_WriteRegister
-                0x000015fc       0x14 lib/matejx_avr_lib/mfrc522.o
-                0x000015fc                PCD_WriteRegister
+                0x00001604       0x14 lib/matejx_avr_lib/mfrc522.o
+                0x00001604                PCD_WriteRegister
  .text.PCD_WriteRegister2
-                0x00001610       0x44 lib/matejx_avr_lib/mfrc522.o
-                0x00001610                PCD_WriteRegister2
+                0x00001618       0x44 lib/matejx_avr_lib/mfrc522.o
+                0x00001618                PCD_WriteRegister2
  .text.PCD_ReadRegister
-                0x00001654       0x10 lib/matejx_avr_lib/mfrc522.o
-                0x00001654                PCD_ReadRegister
+                0x0000165c       0x10 lib/matejx_avr_lib/mfrc522.o
+                0x0000165c                PCD_ReadRegister
  .text.PCD_ReadRegister2
-                0x00001664       0xc4 lib/matejx_avr_lib/mfrc522.o
-                0x00001664                PCD_ReadRegister2
+                0x0000166c       0xc4 lib/matejx_avr_lib/mfrc522.o
+                0x0000166c                PCD_ReadRegister2
  .text.PCD_SetRegisterBitMask
-                0x00001728       0x18 lib/matejx_avr_lib/mfrc522.o
-                0x00001728                PCD_SetRegisterBitMask
+                0x00001730       0x18 lib/matejx_avr_lib/mfrc522.o
+                0x00001730                PCD_SetRegisterBitMask
  .text.PCD_ClearRegisterBitMask
-                0x00001740       0x1a lib/matejx_avr_lib/mfrc522.o
-                0x00001740                PCD_ClearRegisterBitMask
+                0x00001748       0x1a lib/matejx_avr_lib/mfrc522.o
+                0x00001748                PCD_ClearRegisterBitMask
  .text.PCD_CalculateCRC
-                0x0000175a       0x6e lib/matejx_avr_lib/mfrc522.o
-                0x0000175a                PCD_CalculateCRC
+                0x00001762       0x6e lib/matejx_avr_lib/mfrc522.o
+                0x00001762                PCD_CalculateCRC
  .text.PCD_Reset
-                0x000017c8       0x34 lib/matejx_avr_lib/mfrc522.o
-                0x000017c8                PCD_Reset
+                0x000017d0       0x34 lib/matejx_avr_lib/mfrc522.o
+                0x000017d0                PCD_Reset
  .text.PCD_AntennaOn
-                0x000017fc       0x16 lib/matejx_avr_lib/mfrc522.o
-                0x000017fc                PCD_AntennaOn
+                0x00001804       0x16 lib/matejx_avr_lib/mfrc522.o
+                0x00001804                PCD_AntennaOn
  .text.PCD_Init
-                0x00001812       0x54 lib/matejx_avr_lib/mfrc522.o
-                0x00001812                PCD_Init
+                0x0000181a       0x54 lib/matejx_avr_lib/mfrc522.o
+                0x0000181a                PCD_Init
  .text.PCD_CommunicateWithPICC
-                0x00001866      0x1b6 lib/matejx_avr_lib/mfrc522.o
-                0x00001866                PCD_CommunicateWithPICC
+                0x0000186e      0x1b6 lib/matejx_avr_lib/mfrc522.o
+                0x0000186e                PCD_CommunicateWithPICC
  .text.PCD_TransceiveData
-                0x00001a1c       0x36 lib/matejx_avr_lib/mfrc522.o
-                0x00001a1c                PCD_TransceiveData
+                0x00001a24       0x36 lib/matejx_avr_lib/mfrc522.o
+                0x00001a24                PCD_TransceiveData
  .text.PICC_REQA_or_WUPA
-                0x00001a52       0x8a lib/matejx_avr_lib/mfrc522.o
-                0x00001a52                PICC_REQA_or_WUPA
+                0x00001a5a       0x8a lib/matejx_avr_lib/mfrc522.o
+                0x00001a5a                PICC_REQA_or_WUPA
  .text.PICC_RequestA
-                0x00001adc        0xa lib/matejx_avr_lib/mfrc522.o
-                0x00001adc                PICC_RequestA
+                0x00001ae4        0xa lib/matejx_avr_lib/mfrc522.o
+                0x00001ae4                PICC_RequestA
  .text.PICC_Select
-                0x00001ae6      0x37e lib/matejx_avr_lib/mfrc522.o
-                0x00001ae6                PICC_Select
+                0x00001aee      0x37e lib/matejx_avr_lib/mfrc522.o
+                0x00001aee                PICC_Select
  .text.PICC_IsNewCardPresent
-                0x00001e64       0x32 lib/matejx_avr_lib/mfrc522.o
-                0x00001e64                PICC_IsNewCardPresent
+                0x00001e6c       0x32 lib/matejx_avr_lib/mfrc522.o
+                0x00001e6c                PICC_IsNewCardPresent
  .text.PICC_ReadCardSerial
-                0x00001e96       0x10 lib/matejx_avr_lib/mfrc522.o
-                0x00001e96                PICC_ReadCardSerial
+                0x00001e9e       0x10 lib/matejx_avr_lib/mfrc522.o
+                0x00001e9e                PICC_ReadCardSerial
  .text.spi_init
-                0x00001ea6       0x1e lib/matejx_avr_lib/spi.o
-                0x00001ea6                spi_init
- .text.spi_rw   0x00001ec4       0x12 lib/matejx_avr_lib/spi.o
-                0x00001ec4                spi_rw
+                0x00001eae       0x1e lib/matejx_avr_lib/spi.o
+                0x00001eae                spi_init
+ .text.spi_rw   0x00001ecc       0x12 lib/matejx_avr_lib/spi.o
+                0x00001ecc                spi_rw
  .text.__vector_24
-                0x00001ed6       0x14 lib/matejx_avr_lib/spi.o
-                0x00001ed6                __vector_24
+                0x00001ede       0x14 lib/matejx_avr_lib/spi.o
+                0x00001ede                __vector_24
  .text.cli_print_help
-                0x00001eea       0xa2 src/cli_microrl.o
-                0x00001eea                cli_print_help
+                0x00001ef2       0xa2 src/cli_microrl.o
+                0x00001ef2                cli_print_help
  .text.cli_print_ascii_tbls
-                0x00001f8c       0x7a src/cli_microrl.o
-                0x00001f8c                cli_print_ascii_tbls
+                0x00001f94       0x7a src/cli_microrl.o
+                0x00001f94                cli_print_ascii_tbls
  .text.cli_handle_month
-                0x00002006       0xcc src/cli_microrl.o
-                0x00002006                cli_handle_month
+                0x0000200e       0xcc src/cli_microrl.o
+                0x0000200e                cli_handle_month
  .text.cli_rfid_read
-                0x000020d2       0xe6 src/cli_microrl.o
-                0x000020d2                cli_rfid_read
+                0x000020da       0xe6 src/cli_microrl.o
+                0x000020da                cli_rfid_read
  .text.cli_rfid_add
-                0x000021b8       0x90 src/cli_microrl.o
-                0x000021b8                cli_rfid_add
+                0x000021c0       0x90 src/cli_microrl.o
+                0x000021c0                cli_rfid_add
  .text.cli_rfid_remove
-                0x00002248        0xa src/cli_microrl.o
-                0x00002248                cli_rfid_remove
+                0x00002250        0xa src/cli_microrl.o
+                0x00002250                cli_rfid_remove
  .text.cli_rfid_print
-                0x00002252        0x4 src/cli_microrl.o
-                0x00002252                cli_rfid_print
+                0x0000225a        0x4 src/cli_microrl.o
+                0x0000225a                cli_rfid_print
  .text.cli_mem_stat
-                0x00002256      0x132 src/cli_microrl.o
-                0x00002256                cli_mem_stat
+                0x0000225e      0x132 src/cli_microrl.o
+                0x0000225e                cli_mem_stat
  .text.cli_print
-                0x00002388       0x18 src/cli_microrl.o
-                0x00002388                cli_print
+                0x00002390       0x18 src/cli_microrl.o
+                0x00002390                cli_print
  .text.cli_get_char
-                0x000023a0       0x14 src/cli_microrl.o
-                0x000023a0                cli_get_char
+                0x000023a8       0x14 src/cli_microrl.o
+                0x000023a8                cli_get_char
  .text.print_version
-                0x000023b4       0x5a src/cli_microrl.o
-                0x000023b4                print_version
+                0x000023bc       0x5a src/cli_microrl.o
+                0x000023bc                print_version
  .text.cli_print_ver
-                0x0000240e       0x1a src/cli_microrl.o
-                0x0000240e                cli_print_ver
+                0x00002416       0x1a src/cli_microrl.o
+                0x00002416                cli_print_ver
  .text.cli_print_cmd_error
-                0x00002428       0x1e src/cli_microrl.o
-                0x00002428                cli_print_cmd_error
+                0x00002430       0x1e src/cli_microrl.o
+                0x00002430                cli_print_cmd_error
  .text.cli_print_cmd_arg_error
-                0x00002446       0x1e src/cli_microrl.o
-                0x00002446                cli_print_cmd_arg_error
+                0x0000244e       0x1e src/cli_microrl.o
+                0x0000244e                cli_print_cmd_arg_error
  .text.cli_execute
-                0x00002464       0xba src/cli_microrl.o
-                0x00002464                cli_execute
- .text.main     0x0000251e      0x276 src/main.o
-                0x0000251e                main
+                0x0000246c       0xba src/cli_microrl.o
+                0x0000246c                cli_execute
+ .text.main     0x00002526      0x276 src/main.o
+                0x00002526                main
  .text.__vector_47
-                0x00002794       0x4a src/main.o
-                0x00002794                __vector_47
+                0x0000279c       0x4a src/main.o
+                0x0000279c                __vector_47
  .text.print_ascii_tbl
-                0x000027de       0x62 src/print_helper.o
-                0x000027de                print_ascii_tbl
+                0x000027e6       0x62 src/print_helper.o
+                0x000027e6                print_ascii_tbl
  .text.print_for_human
-                0x00002840       0xb8 src/print_helper.o
-                0x00002840                print_for_human
+                0x00002848       0xb8 src/print_helper.o
+                0x00002848                print_for_human
  .text.rfid_print_card_info
-                0x000028f8       0xc0 src/rfid.o
-                0x000028f8                rfid_print_card_info
+                0x00002900       0xc0 src/rfid.o
+                0x00002900                rfid_print_card_info
  .text.rfid_print_card_list
-                0x000029b8       0x70 src/rfid.o
-                0x000029b8                rfid_print_card_list
+                0x000029c0       0x70 src/rfid.o
+                0x000029c0                rfid_print_card_list
  .text.rfid_find_card
-                0x00002a28       0x4e src/rfid.o
-                0x00002a28                rfid_find_card
+                0x00002a30       0x4e src/rfid.o
+                0x00002a30                rfid_find_card
  .text.rfid_add_card
-                0x00002a76       0xce src/rfid.o
-                0x00002a76                rfid_add_card
+                0x00002a7e       0xce src/rfid.o
+                0x00002a7e                rfid_add_card
  .text.rfid_remove_card_by_uid
-                0x00002b44      0x1c6 src/rfid.o
-                0x00002b44                rfid_remove_card_by_uid
- .text.uart0_putchar
-                0x00002d0a       0x1c src/uart-wrapper.o
-                0x00002d0a                uart0_putchar
+                0x00002b4c      0x1c6 src/rfid.o
+                0x00002b4c                rfid_remove_card_by_uid
  .text.uart0_getchar
-                0x00002d26       0x12 src/uart-wrapper.o
-                0x00002d26                uart0_getchar
+                0x00002d12       0x12 src/uart-wrapper.o
+ .text.uart0_putchar
+                0x00002d24       0x1c src/uart-wrapper.o
  .text.uart3_putchar
-                0x00002d38       0x1c src/uart-wrapper.o
-                0x00002d38                uart3_putchar
- .text.libgcc   0x00002d54       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr6\libgcc.a(_tablejump2.o)
-                0x00002d54                __tablejump2__
+                0x00002d40       0x1c src/uart-wrapper.o
+ .text.libgcc   0x00002d5c       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr6\libgcc.a(_tablejump2.o)
+                0x00002d5c                __tablejump2__
  .text.avr-libc
-                0x00002d64       0x68 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(assert.o)
-                0x00002d64                __assert
+                0x00002d6c       0x68 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(assert.o)
+                0x00002d6c                __assert
  .text.avr-libc
-                0x00002dcc      0x25a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(malloc.o)
-                0x00002dcc                malloc
-                0x00002ef6                free
+                0x00002dd4      0x25a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(malloc.o)
+                0x00002dd4                malloc
+                0x00002efe                free
  .text.avr-libc
-                0x00003026        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(abort.o)
-                0x00003026                abort
+                0x0000302e        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(abort.o)
+                0x0000302e                abort
  .text.avr-libc
-                0x0000302e       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(strcmp_P.o)
-                0x0000302e                strcmp_P
+                0x00003036       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(strcmp_P.o)
+                0x00003036                strcmp_P
  .text.avr-libc
-                0x00003040       0x1c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(strncmp_P.o)
-                0x00003040                strncmp_P
+                0x00003048       0x1c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(strncmp_P.o)
+                0x00003048                strncmp_P
  .text.avr-libc
-                0x0000305c       0x1a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(memcmp.o)
-                0x0000305c                memcmp
+                0x00003064       0x1a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(memcmp.o)
+                0x00003064                memcmp
  .text.avr-libc
-                0x00003076       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(memcpy.o)
-                0x00003076                memcpy
+                0x0000307e       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(memcpy.o)
+                0x0000307e                memcpy
  .text.avr-libc
-                0x00003088       0x22 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(memmove.o)
-                0x00003088                memmove
+                0x00003090       0x22 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(memmove.o)
+                0x00003090                memmove
  .text.avr-libc
-                0x000030aa       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(strcat.o)
-                0x000030aa                strcat
+                0x000030b2       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(strcat.o)
+                0x000030b2                strcat
  .text.avr-libc
-                0x000030c0       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(strcmp.o)
-                0x000030c0                strcmp
+                0x000030c8       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(strcmp.o)
+                0x000030c8                strcmp
  .text.avr-libc
-                0x000030d2        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(strcpy.o)
-                0x000030d2                strcpy
+                0x000030da        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(strcpy.o)
+                0x000030da                strcpy
  .text.avr-libc
-                0x000030e0       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(fprintf.o)
-                0x000030e0                fprintf
+                0x000030e8       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(fprintf.o)
+                0x000030e8                fprintf
  .text.avr-libc
-                0x000030fe       0x38 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(fprintf_p.o)
-                0x000030fe                fprintf_P
+                0x00003106       0x38 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(fprintf_p.o)
+                0x00003106                fprintf_P
  .text.avr-libc
-                0x00003136       0x70 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(fputc.o)
-                0x00003136                fputc
+                0x0000313e       0x70 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(fputc.o)
+                0x0000313e                fputc
  .text.avr-libc
-                0x000031a6       0x26 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(printf.o)
-                0x000031a6                printf
+                0x000031ae       0x26 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(printf.o)
+                0x000031ae                printf
  .text.avr-libc
-                0x000031cc       0x4e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(printf_p.o)
-                0x000031cc                printf_P
+                0x000031d4       0x4e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(printf_p.o)
+                0x000031d4                printf_P
  .text.avr-libc
-                0x0000321a       0x78 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(snprintf.o)
-                0x0000321a                snprintf
+                0x00003222       0x78 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(snprintf.o)
+                0x00003222                snprintf
  .text.avr-libc
-                0x00003292       0x5e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(sprintf.o)
-                0x00003292                sprintf
+                0x0000329a       0x5e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(sprintf.o)
+                0x0000329a                sprintf
  .text.avr-libc
-                0x000032f0      0x3dc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(vfprintf_std.o)
-                0x000032f0                vfprintf
+                0x000032f8      0x3dc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(vfprintf_std.o)
+                0x000032f8                vfprintf
  .text.avr-libc
-                0x000036cc       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(strnlen_P.o)
-                0x000036cc                strnlen_P
+                0x000036d4       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(strnlen_P.o)
+                0x000036d4                strnlen_P
  .text.avr-libc
-                0x000036e2       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(strnlen.o)
-                0x000036e2                strnlen
+                0x000036ea       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(strnlen.o)
+                0x000036ea                strnlen
  .text.avr-libc
-                0x000036f8       0xbc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(ultoa_invert.o)
-                0x000036f8                __ultoa_invert
-                0x000037b4                . = ALIGN (0x2)
+                0x00003700       0xbc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(ultoa_invert.o)
+                0x00003700                __ultoa_invert
+                0x000037bc                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000037b4        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr6\libgcc.a(_exit.o)
-                0x000037b4                _exit
-                0x000037b4                exit
+ .fini9         0x000037bc        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr6\libgcc.a(_exit.o)
+                0x000037bc                _exit
+                0x000037bc                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -1038,11 +1035,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000037b4        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr6\libgcc.a(_exit.o)
+ .fini0         0x000037bc        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr6\libgcc.a(_exit.o)
  *(.fini0)
-                0x000037b8                _etext = .
+                0x000037c0                _etext = .
 
-.data           0x00800200      0x166 load address 0x000037b8
+.data           0x00800200      0x166 load address 0x000037c0
                 0x00800200                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800200        0x6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(malloc.o)
@@ -1056,10 +1053,10 @@ END GROUP
  .data.prl      0x00800208        0x2 src/main.o
                 0x00800208                prl
  .data.uart3_out
-                0x0080020a        0xe src/main.o
+                0x0080020a        0xe src/uart-wrapper.o
                 0x0080020a                uart3_out
  .data.uart0_io
-                0x00800218        0xe src/main.o
+                0x00800218        0xe src/uart-wrapper.o
                 0x00800218                uart0_io
  *(.rodata)
  *(.rodata*)
@@ -1122,11 +1119,11 @@ END GROUP
                 0x008004f0       0x80 lib/andygock_avr-uart/uart.o
  .bss.prev_space.2668
                 0x00800570        0x2 src/cli_microrl.o
- .bss.message_start.2477
+ .bss.message_start.2469
                 0x00800572        0x4 src/main.o
- .bss.door_open_start.2478
+ .bss.door_open_start.2470
                 0x00800576        0x4 src/main.o
- .bss.current_time.2463
+ .bss.current_time.2455
                 0x0080057a        0x4 src/main.o
  .bss.head      0x0080057e        0x2 src/rfid.o
                 0x0080057e                head
@@ -1140,8 +1137,8 @@ END GROUP
  COMMON         0x008005f9        0x6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr6\libc.a(iob.o)
                 0x008005f9                __iob
                 0x008005ff                PROVIDE (__bss_end, .)
-                0x000037b8                __data_load_start = LOADADDR (.data)
-                0x0000391e                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000037c0                __data_load_start = LOADADDR (.data)
+                0x00003926                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x008005ff        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -1265,7 +1262,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x635f
+.debug_info     0x00000000     0x6376
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0xbbc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega2560/avr6/crtatmega2560.o
  .debug_info    0x00000bbc      0x640 lib/andygock_avr-uart/uart.o
@@ -1276,12 +1273,12 @@ END GROUP
  .debug_info    0x00003a1e       0xd9 lib/matejx_avr_lib/spi.o
  .debug_info    0x00003af7      0xe7a src/cli_microrl.o
  .debug_info    0x00004971      0x3bf src/hmi_msg.o
- .debug_info    0x00004d30      0xab9 src/main.o
- .debug_info    0x000057e9      0x25e src/print_helper.o
- .debug_info    0x00005a47      0x685 src/rfid.o
- .debug_info    0x000060cc      0x293 src/uart-wrapper.o
+ .debug_info    0x00004d30      0xaaf src/main.o
+ .debug_info    0x000057df      0x25e src/print_helper.o
+ .debug_info    0x00005a3d      0x685 src/rfid.o
+ .debug_info    0x000060c2      0x2b4 src/uart-wrapper.o
 
-.debug_abbrev   0x00000000     0x212b
+.debug_abbrev   0x00000000     0x2138
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0xb1a C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega2560/avr6/crtatmega2560.o
  .debug_abbrev  0x00000b1a      0x143 lib/andygock_avr-uart/uart.o
@@ -1295,9 +1292,9 @@ END GROUP
  .debug_abbrev  0x00001937      0x361 src/main.o
  .debug_abbrev  0x00001c98      0x133 src/print_helper.o
  .debug_abbrev  0x00001dcb      0x1e2 src/rfid.o
- .debug_abbrev  0x00001fad      0x17e src/uart-wrapper.o
+ .debug_abbrev  0x00001fad      0x18b src/uart-wrapper.o
 
-.debug_line     0x00000000     0x2e93
+.debug_line     0x00000000     0x2e98
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x1f9 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega2560/avr6/crtatmega2560.o
  .debug_line    0x000001f9      0x49b lib/andygock_avr-uart/uart.o
@@ -1306,12 +1303,12 @@ END GROUP
  .debug_line    0x00000ddb      0x484 lib/helius_microrl/microrl.o
  .debug_line    0x0000125f      0xb6b lib/matejx_avr_lib/mfrc522.o
  .debug_line    0x00001dca      0x119 lib/matejx_avr_lib/spi.o
- .debug_line    0x00001ee3      0x601 src/cli_microrl.o
- .debug_line    0x000024e4       0x2e src/hmi_msg.o
- .debug_line    0x00002512      0x383 src/main.o
- .debug_line    0x00002895      0x11a src/print_helper.o
- .debug_line    0x000029af      0x3a4 src/rfid.o
- .debug_line    0x00002d53      0x140 src/uart-wrapper.o
+ .debug_line    0x00001ee3      0x602 src/cli_microrl.o
+ .debug_line    0x000024e5       0x2e src/hmi_msg.o
+ .debug_line    0x00002513      0x384 src/main.o
+ .debug_line    0x00002897      0x11c src/print_helper.o
+ .debug_line    0x000029b3      0x3a5 src/rfid.o
+ .debug_line    0x00002d58      0x140 src/uart-wrapper.o
 
 .debug_frame    0x00000000     0x1030
  *(.debug_frame)
@@ -1353,7 +1350,7 @@ END GROUP
  .debug_str     0x000018cf       0x99 src/rfid.o
                                 0x2bf (size before relaxing)
  .debug_str     0x00001968       0x40 src/uart-wrapper.o
-                                0x212 (size before relaxing)
+                                0x225 (size before relaxing)
 
 .debug_loc      0x00000000     0x4a3b
  *(.debug_loc)

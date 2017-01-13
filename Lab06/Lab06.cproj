@@ -303,6 +303,9 @@
     <None Include="lib\matejx_avr_lib\spi.o">
       <SubType>compile</SubType>
     </None>
+    <None Include="LICENSE.txt">
+      <SubType>compile</SubType>
+    </None>
     <None Include="Makefile">
       <SubType>compile</SubType>
     </None>

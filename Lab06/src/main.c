@@ -1,3 +1,22 @@
+/*   Copyright (C) 2017 Maksim Tseljabov <Maksim.Tseljabov@rigold.ee>
+*
+*   This file is a part of RVLP Home Project.
+*
+*   RVLP Home Project is free software: you can redistribute it and/or modify
+*   it under the terms of the GNU General Public License as published by
+*   the Free Software Foundation, either version 3 of the License, or
+*   (at your option) any later version.
+*
+*   RVLP Home Project is distributed in the hope that it will be useful,
+*   but WITHOUT ANY WARRANTY; without even the implied warranty of
+*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*   GNU General Public License for more details.
+*
+*   You should have received a copy of the GNU General Public License
+*   along with RVLP Home Project.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+
 #include <stdio.h>
 #include <avr/io.h>
 #include <avr/pgmspace.h>
@@ -14,12 +33,14 @@
 #include "../lib/matejx_avr_lib/mfrc522.h"
 #include "rfid.h"
 
+
+#warning REMOVE ATMEL STUFF
 //For Atmel Studio
 #ifndef F_CPU
 #define F_CPU 16000000UL
 #endif
 
-
+#warning REMOVE ATMEL STUFF
 /*For Atmel studio
 #include "C:\Users\emaktse\Documents\HITSA\GIT Repository\Controllers\Lab06\Lab06\lib\hd44780_111\hd44780.h"
 #include "C:\Users\emaktse\Documents\HITSA\GIT Repository\Controllers\Lab06\Lab06\lib\andygock_avr-uart\uart.h"
@@ -122,11 +143,13 @@ static inline void heartbeat ()
     static uint32_t current_time;
     uint32_t system_time_copy;
     /*Copy of system_time using atomic block*/
-    ATOMIC_BLOCK(ATOMIC_FORCEON) {
+    ATOMIC_BLOCK(ATOMIC_FORCEON)
+    {
         system_time_copy = system_time;
     }
 
-    if (current_time != system_time_copy) {
+    if (current_time != system_time_copy)
+    {
         /* Toggle led */
         PORTA ^= _BV(PORTA3);
         /* Printout system uptime */
@@ -193,7 +216,8 @@ void main (void)
     print_console();
     start_cli();
 
-    while (1) {
+    while (1)
+    {
         heartbeat();
         // CLI commands are handled in cli_execute()
         microrl_insert_char(prl, cli_get_char());

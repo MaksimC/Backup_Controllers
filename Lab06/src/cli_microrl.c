@@ -1,3 +1,22 @@
+/*   Copyright (C) 2017 Maksim Tseljabov <Maksim.Tseljabov@rigold.ee>
+*
+*   This file is a part of RVLP Home Project.
+*
+*   RVLP Home Project is free software: you can redistribute it and/or modify
+*   it under the terms of the GNU General Public License as published by
+*   the Free Software Foundation, either version 3 of the License, or
+*   (at your option) any later version.
+*
+*   RVLP Home Project is distributed in the hope that it will be useful,
+*   but WITHOUT ANY WARRANTY; without even the implied warranty of
+*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*   GNU General Public License for more details.
+*
+*   You should have received a copy of the GNU General Public License
+*   along with RVLP Home Project.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+
 #include <stdio.h>
 #include <string.h>
 #include <avr/pgmspace.h>
@@ -111,7 +130,8 @@ void cli_handle_month(const char *const *argv)
     lcd_goto(0x40);
 
     // Compare the counted input chars with same amount of chars in strings in months[] and in case of success output month to LCD.
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 6; i++)
+    {
         if (!strncmp_P(argv[1], (PGM_P)pgm_read_word(&months[i]), strlen(argv[1])))
         {
             fprintf_P(stdout, PSTR("%S\n"), (PGM_P)pgm_read_word(&months[i]));
